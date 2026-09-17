@@ -1,0 +1,28 @@
+{
+  "model": "fmjev-fm",
+  "state": "届いた靴のサイズが違います。返金ではなく、サイズ26cmの同じ商品に交換してください。",
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "この問い合わせを担当する部署は？",
+      "criteria": {
+        "billing": "請求、支払い、領収書",
+        "shipping": "配送状況、遅延、紛失",
+        "returns": "返品、交換、誤配送や不良品"
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "顧客が表明している緊急度を評価してください。",
+      "criteria": [
+        "即時対応や今日中の対応を求めている",
+        "近いうちの対応を求めている",
+        "期限や急ぎの指定がない"
+      ]
+    },
+    "wants_refund": {
+      "type": "noul",
+      "instructions": "顧客は返金を求めていますか？"
+    }
+  }
+}
