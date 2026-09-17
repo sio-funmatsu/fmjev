@@ -4,6 +4,14 @@
 
 A local Jev-style HTTP API powered by Apple's `fm respond`. The Python environment is managed with `uv` and uses Python 3.14. There are no third-party Python dependencies. A working `fm` installation is required.
 
+## Experimental project: fundamentally different from Jev
+
+**FmJev is an experiment that imitates part of Jev's API shape. It is fundamentally different from Jev and does not reproduce its model architecture, training, or inference mechanism.**
+
+FmJev asks a text-generating model to produce probability values as structured text, then parses, validates, normalizes, and repackages them in Python. It also starts a separate `fm` process for each question and runs questions sequentially. These extra generation and conversion steps introduce redundant work and overhead; imitating the response format does not reproduce Jev's native decision-making approach or efficiency.
+
+The probabilities are uncalibrated model-generated estimates, and confidence is computed using a custom formula. A Jev-shaped response does not imply equivalent accuracy, reliability, or speed. This project is for experimentation, not an equivalent implementation or a production-ready replacement for Jev.
+
 ## Getting started
 
 ```sh
