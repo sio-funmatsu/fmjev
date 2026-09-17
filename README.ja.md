@@ -5,7 +5,7 @@ Appleの `fm respond` を使うローカルのJev風HTTP API。Python環境は `
 ## 起動
 
 ```sh
-cd /Users/sio/fmjev
+cd fmjev
 uv sync --locked
 fm available
 fm respond --no-stream 'Reply with hello.'
@@ -23,7 +23,7 @@ curl -sS http://127.0.0.1:8080/v1/systemone \
 
 `GET /health` はサーバーの生存確認のみで、推論の成功は保証しません。
 ポートや待ち時間は `uv run --locked python -m fmjev --port 8081 --timeout 60 --request-timeout 180` で変更できます。
-`--fm /path/to/fm` で実行ファイルを指定できます。
+`--fm ./path/to/fm` で実行ファイルを指定できます。
 
 ## 入力と出力
 

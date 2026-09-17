@@ -7,7 +7,7 @@ A local Jev-style HTTP API powered by Apple's `fm respond`. The Python environme
 ## Getting started
 
 ```sh
-cd /Users/sio/fmjev
+cd fmjev
 uv sync --locked
 fm available
 fm respond --no-stream 'Reply with hello.'
@@ -25,7 +25,7 @@ curl -sS http://127.0.0.1:8080/v1/systemone \
 
 `GET /health` checks server liveness only; it does not guarantee that inference will succeed.
 Change the port and timeouts with `uv run --locked python -m fmjev --port 8081 --timeout 60 --request-timeout 180`.
-Use `--fm /path/to/fm` to specify the executable.
+Use `--fm ./path/to/fm` to specify the executable.
 
 ## Requests and responses
 
