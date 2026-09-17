@@ -1,0 +1,11 @@
+{
+  "title": "Decision",
+  "type": "object",
+  "properties": {
+    "action": {"type": "string", "enum": ["accept", "reject", "review"]},
+    "probability": {"type": "number", "minimum": 0, "maximum": 1}
+  },
+  "required": ["action", "probability"],
+  "additionalProperties": false,
+  "x-order": ["action", "probability"]
+}
